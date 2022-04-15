@@ -58,23 +58,29 @@ INSERT INTO `pizzeria`.`Productes` (`NomProducte`, `Preu`, `tipusProducte`, `Cat
 INSERT INTO `pizzeria`.`Productes` (`NomProducte`, `Preu`, `tipusProducte`, `CategoriaPizza_idCategoriaPizza`) VALUES ('Hamburguesa vegeteriana', 15.50, 'hamburguesa',null);
 
 /*Comandes*/
-INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idRepartidor`, `horaEntrega`) VALUES ('local', '2 pizzes, 1 beguda', 35.50, 1, 1, null, null);
+INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idEmpleats`, `horaEntrega`) VALUES ('local', '2 pizzes, 1 beguda', 35.50, 1, 1, 1, null);
 
-INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idRepartidor`, `horaEntrega`) VALUES ('domicili', '4 pizzes, 1 hamburguesa, 5 beguda', 59.34, 2, 1, 2, now());
+INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idEmpleats`, `horaEntrega`) VALUES ('domicili', '4 pizzes, 1 hamburguesa, 5 beguda', 59.34, 2, 1, 2, now());
 
-/*INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idRepartidor`, `horaEntrega`) VALUES ('local', '2 pizzes, 1 beguda', 35.50, 1, 1, null, null);
+INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idEmpleats`, `horaEntrega`) VALUES ('domicili', '1 pizzes, 1 beguda', 14.30, 2, 1, 2, now());
 
-INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idRepartidor`, `horaEntrega`) VALUES ('local', '2 pizzes, 1 beguda', 35.50, 1, 1, null, null);
+INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idEmpleats`, `horaEntrega`) VALUES ('domicili', '1 pizzes, 1 beguda', 17.85, 6, 4, 8, now());
 
-INSERT INTO `pizzeria`.`comandes` (`tipusComanda`, `detallComanda`, `preuTotal`, `client_idclient`, `Botiga_idBotiga`, `idRepartidor`, `horaEntrega`) VALUES ('local', '2 pizzes, 1 beguda', 35.50, 1, 1, null, null);
-*/
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 1, 1);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 2, 1);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 5, 1);
+/*ProductesComandes*/
 
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 1, 1);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 2, 3);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 10, 1);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 5, 2);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 6, 2);
-INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 7, 1);
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 1, 1); -- p carbonara
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 2, 1); -- p margarita
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (1, 5, 1); -- volldam
+
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 1, 1); -- p carbonara
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 2, 3); -- p margarita
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 10, 1); -- Hamburguesa Americana patates
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 5, 2); -- Cervesa Voll-Damm
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 6, 2); -- Coca Cola
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (2, 7, 1); -- Cervesa Turia
+
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (3, 1, 1); -- p carbonara
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (3, 7, 1); -- Cervesa Turia
+
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (4, 3, 1); -- p calzone
+INSERT INTO `pizzeria`.`ProductesComandes` (`comandes_idcomandes`, `Productes_idProductes`,`quantitat`) VALUES (4, 8, 1); -- aquarius
